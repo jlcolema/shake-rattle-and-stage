@@ -1,0 +1,289 @@
+
+/*-------------------------------------------
+	Testimonials
+-------------------------------------------*/
+
+
+#testimonials {
+
+	@media screen and (min-width: 800px) {
+
+		margin: 0 auto;
+		padding: 0 105px;
+
+	}
+
+	.inner-wrap {
+
+		position: relative;
+		margin: 80px 20px 0 10px;
+		padding: 0 0 0 30px;
+		background: $orange;
+
+		&:before {
+
+			content: "";
+			position: absolute;
+			left: -10px;
+			top: 0;
+			height: 100%;
+			width: 10px;
+			background: url(../img/contact-form-orange-background.png) repeat-y;
+			z-index: -1;
+
+		}
+
+		&:after {
+
+			content: "";
+			position: absolute;
+			right: -20px;
+			top: 0;
+			height: 100%;
+			width: 20px;
+			background: url(../img/contact-form-orange-background.png) right top repeat-y;
+			z-index: -1;
+
+		}
+
+	}
+
+		.inner-inner-wrap {
+
+			position: relative;
+			top: -30px;
+			padding: 40px 20px;
+			background: rgb(255, 252, 233) url(../img/contact-form-background.png) center top repeat-y;
+
+			@media screen and (min-width: 800px) {
+
+				padding: 40px 50px;
+
+			}
+
+			@media screen and (min-width: 1000px) {
+
+				padding: 40px 100px;
+
+			}
+
+			&:before {
+
+				content: "";
+				position: absolute;
+				left: -20px;
+				top: 0;
+				height: 100%;
+				width: 20px;
+				background: url(../img/contact-form-background.png) repeat-y;
+				z-index: 5;
+
+			}
+
+			&:after {
+
+				content: "";
+				position: absolute;
+				right: -20px;
+				top: 0;
+				height: 100%;
+				width: 20px;
+				background: url(../img/contact-form-background.png) right top repeat-y;
+				z-index: 5;
+
+			}
+
+		}
+
+			.header {
+
+				.title {
+
+					margin-bottom: (36/30) + em;
+					@include font-size(30);
+					line-height: (42/30) + em;
+					@include blokletters-viltstift;
+					text-align: center;
+					color: $orange;
+
+					&:before {
+
+						content: "• ";
+
+					}
+
+					&:after {
+
+						content: " •";
+
+					}
+
+				}
+
+			}
+
+			.flexslider {}
+
+				.slides {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li {}
+
+						blockquote {
+
+							color: rgb(112, 112, 112);
+							@include group;
+
+						}
+
+							.quote {
+
+								p {
+
+									&:last-of-type {}
+
+								}
+
+							}
+
+							cite {
+
+								float: right;
+
+							}
+
+				}
+
+				.flex-direction-nav {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					@include group;
+
+					li {
+
+						width: 50%;
+
+						@media screen and (min-width: 800px) {
+
+							position: absolute;
+							top: 50%;
+							width: auto;
+							margin-top: -20px;
+							@include hide-text;
+
+						}
+
+						&:first-of-type {
+
+							float: left;
+
+							@media screen and (min-width: 800px) {
+
+								left: -140px;
+								float: none;
+
+							}
+
+							&:before {
+
+								content: "<< ";
+								color: $orange;
+
+								@media screen and (min-width: 800px) {
+
+									content: none;
+
+								}
+
+							}
+
+						}
+
+						&:last-of-type {
+
+							float: right;
+							text-align: right;
+
+							@media screen and (min-width: 800px) {
+
+								right: -120px;
+								float: none;
+								text-align: left;
+
+							}
+
+							&:after {
+
+								content: " >>";
+								color: $orange;
+
+								@media screen and (min-width: 800px) {
+
+									content: none;
+
+								}
+
+
+							}
+
+						}
+
+					}
+
+						a {
+
+							@media screen and (min-width: 800px) {
+
+								display: block;
+								width: 80px;
+								height: 80px;
+								background: url(../img/testimonials-nav.png);
+
+							}
+
+							&:hover {}
+
+						}
+
+						.flex-prev {
+
+							&:hover {
+
+								@media screen and (min-width: 800px) {
+
+									background-position: 0 -80px;
+
+								}
+
+							}
+
+						}
+
+						.flex-next {
+
+							@media screen and (min-width: 800px) {
+
+								background-position: -80px 0;
+
+							}
+
+							&:hover {
+
+								@media screen and (min-width: 800px) {
+
+									background-position: -80px -80px;
+
+								}
+
+							}
+
+						}
+
+				}
+
+}

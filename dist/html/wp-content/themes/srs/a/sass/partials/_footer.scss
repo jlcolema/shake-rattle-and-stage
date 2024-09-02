@@ -1,0 +1,63 @@
+
+/*-------------------------------------------
+	Footer
+-------------------------------------------*/
+
+
+#footer {
+
+	padding: 20px 0;
+	color: rgb(124, 126, 130);
+	background: rgb(34, 34, 34);
+
+	.wrap {
+
+		@media screen and (min-width: 600px) {
+
+			@include group;
+
+		}
+
+	}
+
+}
+
+		#copyright {
+
+			margin-bottom: (10/14) + em;
+			@include font-size(14);
+			line-height: (18/14) + em;
+
+			@media screen and (min-width: 600px) {
+
+				float: left;
+				margin: 0;
+
+			}
+
+		}
+
+		#created-by {
+
+			@include font-size(14);
+			line-height: (18/14) + em;
+
+			@media screen and (min-width: 600px) {
+
+				float: right;
+
+			}
+
+			a {
+
+				color: rgb(124, 126, 130);
+
+				&:hover {
+
+					color: $white;
+
+				}
+
+			}
+
+		}

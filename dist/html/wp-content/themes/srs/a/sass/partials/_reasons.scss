@@ -1,0 +1,125 @@
+
+/*-------------------------------------------
+	Reasons
+-------------------------------------------*/
+
+
+#reasons {
+
+	ol {
+
+		counter-reset: li;
+		margin: 0;
+		padding: 40px 0 0 0;
+		list-style: none;
+
+		@media screen and (min-width: 740px) {
+
+			padding: 70px 25px 0 65px;
+
+		}
+
+	}
+
+		li {
+
+			position: relative;
+			margin: 0 0 60px 0;
+			padding: 25px;
+			background: rgb(254, 251, 231);
+
+			@media screen and (min-width: 740px) {
+
+				position: relative;
+				margin: 0 0 90px 0;
+				padding: 25px 25px 25px 305px;
+				min-height: 215px;
+
+			}
+
+			&:after {
+
+				content: counter(li)"";
+				counter-increment: li;
+				position: absolute;
+				left: 50%;
+				top: -40px;
+				width: 90px;
+				height: 76px;
+				margin: 0 0 0 -45px;
+				padding: 14px 0 0 0;
+				@include font-size(48);
+				line-height: (60/48) + em;
+				font-weight: bold;
+				text-align: center;
+				color: $white;
+				background: $orange;
+				@include border-radius(50%);
+				@include box-shadow(0 3px 0 darken($orange, 7%));
+				z-index: 5;
+
+				@media screen and (min-width: 740px) {
+
+					left: -70px;
+					top: -70px;
+					margin: 0;
+
+				}
+
+			}
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+		}
+
+			.photo {
+
+				margin: 0 0 20px 0;
+				border: 10px solid rgb(255, 194, 122);
+				z-index: 5;
+
+				@media screen and (min-width: 740px) {
+
+					position: absolute;
+					left: -40px;
+					top: -40px;
+					width: 320px;
+					margin: 0;
+
+				}
+
+			}
+
+				img {}
+
+			.title {
+
+				margin-bottom: (10/24) + em;
+				@include font-size(24);
+				line-height: (30/24) + em;
+				@include blokletters-viltstift;
+				color: $orange;
+
+			}
+
+			.description {
+
+				color: rgb(102, 102, 102);
+
+			}
+
+				p {
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+}

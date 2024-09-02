@@ -1,0 +1,202 @@
+
+/*-------------------------------------------
+	Header
+-------------------------------------------*/
+
+
+#header {
+
+	margin: 0 0 25px 0;
+
+	@media screen and (min-width: 1060px) {
+
+		margin: 0 0 50px 0;
+
+	}
+
+	.wrap {}
+
+}
+
+		#logo {
+
+			width: 230px;
+			margin: 25px auto;
+			@include hide-text;
+
+			@media screen and (min-width: 1060px) {
+
+				width: 460px;
+
+			}
+
+			a {
+
+				display: block;
+				height: 140px;
+				background: url(../img/logo.png);
+				background-size: 230px 140px;
+
+				@media screen and (min-width: 1060px) {
+
+					height: 280px;
+					background-size: 460px 280px;
+
+				}
+
+				&:hover {}
+
+			}
+
+		}
+
+		#nav {
+
+			position: relative;
+
+			.toggle {
+
+				position: absolute;
+				right: 0;
+				top: -74px;
+				@include hide-text;
+				cursor: pointer;
+				z-index: 5;
+
+				@media screen and (min-width: 1060px) {
+
+					display: none;
+
+				}
+
+				span {
+
+					display: block;
+					width: 42px;
+					height: 42px;
+					background: url(../img/nav-toggle.svg);
+					border: 1px solid $white;
+					border: 1px solid rgba($white, 0.35);
+					@include border-radius(3px);
+
+				}
+
+			}
+
+			ul {
+
+				display: none;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border-top: 1px solid $white;
+				border-top: 1px solid rgba($white, 0.35);
+				@include group;
+
+				@media screen and (min-width: 1060px) {
+
+					display: block;
+					padding: 10px 0;
+					border-top: 1px dotted $white;
+					border-top: 1px dotted rgba($white, 0.35);
+					border-bottom: 1px dotted $white;
+					border-bottom: 1px dotted rgba($white, 0.35);
+
+				}
+
+				&.open {
+
+					display: block;
+
+				}
+
+			}
+
+				li {
+
+					float: left;
+					width: 50%;
+					@include font-size(16);
+					line-height: (27/16) + em;
+					@include blokletters-viltstift;
+					text-align: center;
+					border-bottom: 1px solid $white;
+					border-bottom: 1px solid rgba($white, 0.35);
+
+					@media screen and (min-width: 400px) {
+
+						@include font-size(18);
+						line-height: (25/18) + em;
+
+					}
+
+					@media screen and (min-width: 1060px) {
+
+						width: 16.66667%;
+						border: none;
+						border-right: 1px solid $white;
+						border-right: 1px solid rgba($white, 0.35);
+
+					}
+
+					&:nth-child(odd) {
+
+						border-right: 1px dotted $white;
+						border-right: 1px dotted rgba($white, 0.35);
+
+						@media screen and (min-width: 1060px) {
+
+							border-right: 1px solid $white;
+							border-right: 1px solid rgba($white, 0.35);
+
+						}
+
+					}
+
+					&:last-of-type {
+
+						@media screen and (min-width: 1060px) {
+
+							border: none;
+
+						}
+
+					}
+
+				}
+
+					a {
+
+						display: block;
+						height: 50px;
+						padding: 12px 10px 0 10px;
+						color: rgb(231, 231, 231);
+
+						@media screen and (min-width: 1060px) {
+
+							height: auto;
+							padding: 5px 10px;
+
+						}
+
+						&:hover {
+
+							color: $orange;
+
+						}
+
+					}
+
+				.current_page_item {
+
+					a {
+
+						color: $orange;
+
+						&:hover {}
+
+					}
+
+				}
+
+		}

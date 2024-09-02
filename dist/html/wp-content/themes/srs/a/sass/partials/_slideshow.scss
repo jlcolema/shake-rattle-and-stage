@@ -1,0 +1,299 @@
+
+/*-------------------------------------------
+	Slideshow
+-------------------------------------------*/
+
+
+#slideshow {
+
+	margin: 0 0 40px 0;
+	border: 7px solid rgb(41, 52, 69);
+
+	.inner-wrap {
+
+		position: relative;
+
+		&:before {
+
+			@media screen and (min-width: 760px) {
+
+				content: "";
+				position: absolute;
+				left: -24px;
+				right: -24px;
+				bottom: -7px;
+				height: 15px;
+				background: url(../img/post.png) center top repeat-x;
+				border: 7px solid rgb(35, 43, 54);
+				border-bottom-width: 25px;
+				z-index: 2;
+
+			}
+
+		}
+
+	}
+
+		.flexslider {
+
+			position: relative;
+
+		}
+
+			.slides {
+
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+
+					position: relative;
+
+				}
+
+					img {}
+
+					.title {
+
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						z-index: 5;
+
+					}
+
+						.inner-title {
+
+							display: table;
+							width: 100%;
+							height: 100%;
+
+						}
+
+							span {
+
+								display: table-cell;
+								padding: 0 20px;
+								@include font-size(24);
+								line-height: (30/24) + em;
+								@include blokletters-viltstift;
+								text-align: center;
+								vertical-align: middle;
+								text-shadow: 0 2px 4px rgba($black, 0.65);
+
+								@media screen and (min-width: 760px) {
+
+									@include font-size(36);
+									line-height: (42/36) + em;
+
+								}
+
+							}
+
+			}
+
+			.flex-control-paging {
+
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-align: center;
+				z-index: 10;
+
+				@media screen and (min-width: 760px) {
+
+					bottom: 60px;
+
+				}
+
+				li {
+
+					display: inline-block;
+					margin: 5px;
+					@include hide-text;
+
+				}
+
+					a {
+
+						display: block;
+						width: 15px;
+						height: 15px;
+						background: rgb(254, 253, 250);
+						@include border-radius(50%);
+
+						&:hover {
+
+							background: $orange;
+
+						}
+
+					}
+
+					.flex-active {
+
+						background: $orange;
+
+						&:hover {}
+
+					}
+
+			}
+
+			.flex-direction-nav {
+
+				display: none;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				@media screen and (min-width: 760px) {
+
+					display: block;
+
+				}
+
+				li {
+
+					position: absolute;
+					top: 50%;
+					margin-top: -32px;
+					text-indent: -9999px;
+					z-index: 10;
+
+					&:first-of-type {
+
+						left: -21px;
+
+						&:before {
+
+							content: "";
+							position: absolute;
+							left: 0;
+							top: -14px;
+							width: 14px;
+							height: 14px;
+							text-indent: 0;
+							background: url(../img/riser.png);
+							z-index: 5;
+
+						}
+
+					}
+
+					&:last-of-type {
+
+						right: -21px;
+
+						&:before {
+
+							content: "";
+							position: absolute;
+							right: 0;
+							top: -14px;
+							width: 14px;
+							height: 14px;
+							text-indent: 0;
+							background: url(../img/riser.png) -14px 0;
+							z-index: 5;
+
+						}
+
+					}
+
+				}
+
+					a {
+
+						display: block;
+						width: 64px;
+						height: 64px;
+						background: $orange url(../img/slideshow-nav.png);
+
+						&:hover {
+
+							background-color: $red;
+
+						}
+
+					}
+
+					.flex-prev {
+
+						&:hover {}
+
+					}
+
+					.flex-next {
+
+						background-position: -64px 0;
+
+						&:hover {}
+
+					}
+
+			}
+
+		.lights {
+
+			.light {
+
+				position: absolute;
+				top: -14px;
+				bottom: 0;
+				width: 400px;
+				background: url(../img/light.png);
+				z-index: 1;
+
+			}
+
+			.left {
+
+				display: none;
+				left: 0;
+
+				@media screen and (min-width: 760px) {
+
+					display: block;
+
+				}
+
+			}
+
+			.middle {
+
+				display: none;
+				left: 50%;
+				margin-left: -200px;
+
+				@media screen and (min-width: 840px) {
+
+					display: block;
+
+				}
+
+			}
+
+			.right {
+
+				display: none;
+				right: 0;
+
+				@media screen and (min-width: 760px) {
+
+					display: block;
+
+				}
+
+			}
+
+		}
+
+}

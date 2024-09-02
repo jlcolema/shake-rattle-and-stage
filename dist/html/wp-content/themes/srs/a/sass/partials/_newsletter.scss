@@ -1,0 +1,121 @@
+
+/*-------------------------------------------
+	Newsletter
+-------------------------------------------*/
+
+
+#newsletter {
+
+	padding: 40px 0;
+	color: rgb(240, 240, 240);
+	background: rgb(56, 56, 56) url(../img/newsletter-background.png);
+
+	.wrap {}
+
+		header {}
+
+			.title {
+
+				margin-bottom: (24/30) + em;
+				@include font-size(30);
+				line-height: (42/30) + em;
+				@include blokletters-viltstift;
+				text-align: center;
+
+				@media screen and (min-width: 600px) {
+
+					margin-bottom: (30/30) + em;
+
+				}
+
+				&:before {
+
+					content: "• ";
+
+				}
+
+				&:after {
+
+					content: " •";
+
+				}
+
+			}
+
+		.container {
+
+			max-width: 770px;
+			margin: 0 auto;
+
+		}
+
+			.form {}
+
+				.gform_wrapper {}
+
+					form {}
+
+						.gform_body {
+
+							.gform_fields {
+
+								margin: 0;
+								padding: 0;
+								list-style: none;
+
+								@media screen and (min-width: 600px) {
+
+									@include group;
+
+								}
+
+							}
+
+								.gfield {
+
+									margin: 0 0 20px 0;
+
+									@media screen and (min-width: 600px) {
+
+										float: left;
+										width: 50%;
+										margin: 0 0 30px 0;
+										padding: 0 15px 0 0;
+
+									}
+
+									&:last-of-type {
+
+										@media screen and (min-width: 600px) {
+
+											padding: 0 0 0 15px;
+
+										}
+
+									}
+
+								}
+
+									.ginput_container {}
+
+										input {
+
+											border: none;
+
+										}
+
+						}
+
+						.gform_footer {
+
+							text-align: center;
+
+							.button {
+
+								display: inline-block;
+
+							}
+
+						}
+
+}

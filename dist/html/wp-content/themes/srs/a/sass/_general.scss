@@ -1,0 +1,566 @@
+
+//-------------------------------------------
+//	Colors
+//-------------------------------------------
+
+
+// Grayscale
+
+
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
+// rgb(231, 231, 231);
+// rgb(102, 102, 102);
+// rgb(75, 75, 75);
+// rgb(56, 56, 56);
+// rgb(45, 45, 45);
+// rgb(34, 34, 34);
+
+// rgb(124, 126, 30);
+// rgb(139, 157, 174);
+
+$orange: rgb(248, 141, 15);
+$red: rgb(166, 62, 0);
+$blue: rgb(55, 85, 113);
+
+$facebook: rgb(59, 89, 152);
+$twitter: rgb(68, 204, 246);
+
+
+//-------------------------------------------
+//	Fonts
+//-------------------------------------------
+
+
+// Blokletters (http://www.fontsquirrel.com/fonts/Blokletters-Potlood)
+
+
+// Potlood
+
+
+@font-face {
+
+	font-family: "BlokLetters Potlood";
+
+	src: url("../fonts/blokletters/potlood.eot");
+
+	src: url("../fonts/blokletters/potlood.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/blokletters/potlood.woff") format("woff"),
+		url("../fonts/blokletters/potlood.ttf") format("truetype"),
+		url("../fonts/blokletters/potlood.svg#blokletters_potlood") format("svg");
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+@mixin blokletters-potlood {
+
+	font-family: "Blokletters Potlood", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	// font-weight: 300;
+	// font-style: normal;
+
+}
+
+
+// Balpen
+
+
+@font-face {
+
+	font-family: "BlokLetters Balpen";
+
+	src: url("../fonts/blokletters/balpen.eot");
+
+	src: url("../fonts/blokletters/balpen.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/blokletters/balpen.woff") format("woff"),
+		url("../fonts/blokletters/balpen.ttf") format("truetype"),
+		url("../fonts/blokletters/balpen.svg#blokletters_balpen") format("svg");
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+@mixin blokletters-balpen {
+
+	font-family: "Blokletters Balpen", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	// font-weight: 300;
+	// font-style: normal;
+
+}
+
+
+// Viltstift
+
+
+@font-face {
+
+	font-family: "BlokLetters Viltstift";
+
+	src: url("../fonts/blokletters/viltstift.eot");
+
+	src: url("../fonts/blokletters/viltstift.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/blokletters/viltstift.woff") format("woff"),
+		url("../fonts/blokletters/viltstift.ttf") format("truetype"),
+		url("../fonts/blokletters/viltstift.svg#blokletters_viltstift") format("svg");
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+@mixin blokletters-viltstift {
+
+	font-family: "Blokletters Viltstift", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	// font-weight: 300;
+	// font-style: normal;
+
+}
+
+
+//-------------------------------------------
+//	Wrap
+//-------------------------------------------
+
+
+@mixin wrap {
+
+	// Actual max-width is 1170px
+
+	max-width: 1210px;
+	margin: 0 auto;
+	padding: 0 20px;
+
+}
+
+
+/*-------------------------------------------
+	General Selectors
+-------------------------------------------*/
+
+
+html {
+
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	background: $blue url(../img/background.png);
+
+}
+
+body {
+
+	@include font-size(18);
+	line-height: (25/18) + em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: rgb(231, 231, 231);
+	-webkit-font-smoothing: antialiased;
+
+}
+
+
+/* Block Level */
+
+
+h1 {
+
+	margin-bottom: (36/30) + em;
+	@include font-size(30);
+	line-height: (42/30) + em;
+	@include blokletters-viltstift;
+	text-align: center;
+	color: $orange;
+
+}
+
+h2 {
+
+	// margin-bottom: (30/31) + em;
+	// @include font-size(31);
+	// line-height: (35/31) + em;
+	// @include skolar-bold;
+
+}
+
+h3 {
+
+	// margin-bottom: (25/25) + em;
+	// @include font-size(25);
+	// line-height: (33/25) + em;
+	// @include skolar-bold;
+
+}
+
+h4 {
+
+	// margin-bottom: (20/17) + em;
+	// @include font-size(17);
+	// line-height: (22/17) + em;
+	// @include freight-sans-book;
+
+}
+
+h5 {
+
+	// margin-bottom: (20/17) + em;
+	// @include font-size(16);
+	// line-height: (26/17) + em;
+	// @include freight-sans-book;
+
+}
+
+h6 {
+
+	// margin-bottom: (20/16) + em;
+	// @include font-size(16);
+	// line-height: (26/16) + em;
+	// @include freight-sans-book;
+
+}
+
+p {
+
+	margin-bottom: (25/18) + em;
+
+	&:last-of-type {}
+
+}
+
+ol {
+
+	margin-bottom: (25/18) + em;
+	padding: 0 0 0 18px;
+	list-style-type: decimal;
+
+	li {}
+
+}
+
+ul {
+
+	margin-bottom: (25/18) + em;
+	padding: 0 0 0 18px;
+	list-style-type: disc;
+
+	li {}
+
+}
+
+dl {
+
+	margin-bottom: (25/18) + em;
+
+}
+
+	dt {
+
+		// font-weight: bold;
+
+	}
+
+	dd {
+
+		// margin-bottom: (28/17) + em;
+
+	}
+
+table {}
+
+th {
+
+	// padding: 8px;
+	// @include font-size(11);
+	// line-height: (13/11) + em;
+	// font-weight: normal;
+	// color: $gray;
+
+}
+
+td {
+
+	// padding: 8px;
+	// @include font-size(12);
+	// line-height: (14/12) + em;
+
+}
+
+article {}
+
+caption {}
+
+figure {}
+
+figcaption {
+
+	// margin: 20px 0 0 0;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-italic;
+
+}
+
+blockquote {
+
+	p {
+
+		// @include font-size(19);
+		// line-height: (26/19) + em;
+
+	}
+
+}
+
+/* Inline */
+
+i,
+em {
+
+	// font-style: italic;
+
+}
+
+cite {
+
+	@include blokletters-viltstift;
+	color: $orange;
+	font-style: normal;
+
+	&:before {
+
+		content: "— ";
+
+	}
+
+}
+
+b,
+strong {
+
+	// font-weight: bold;
+
+}
+
+a {
+
+	color: $orange;
+	text-decoration: none;
+
+	&:link {}
+
+	&:hover,
+	&:focus {}
+
+}
+
+img {
+
+	display: block;
+	@include box-sizing(content-box);
+
+}
+
+code {}
+
+sub, sup {
+
+	// line-height: 0;
+
+}
+
+ins {
+
+	// color: $black;
+	// background-color: #fcd700;
+	// text-decoration: none;
+
+}
+
+mark {
+
+	// color: $black;
+	// background-color: #fcd700;
+	// font-style: italic;
+	// font-weight: bold;
+
+}
+
+::-moz-selection {
+
+	// color: $black;
+	// background: rgb(246, 203, 32);
+	// text-shadow: none;
+
+}
+
+::selection {
+
+	// color: $gray;
+	// background: rgb(246, 203, 32);
+	// text-shadow: none;
+
+}
+
+
+// Mozilla doesn't style place holders by default
+
+
+input:-moz-placeholder {}
+
+textarea:-moz-placeholder {}
+
+
+/*-------------------------------------------
+	Forms
+-------------------------------------------*/
+
+
+form {}
+
+fieldset {}
+
+legend {
+
+	// display: block;
+	// margin: 0 0 10px 0;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-regular;
+	// text-transform: uppercase;
+
+}
+
+label {
+
+	display: block;
+	margin: 0 0 10px 0;
+	@include font-size(18);
+	line-height: (25/18) + em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: rgb(102, 102, 102);
+
+}
+
+input {
+
+	&[type="text"],
+	&[type="search"],
+	&[type="email"],
+	&[type="password"],
+	&[type="tel"] {
+
+		// Override general styles applied to iOS devices.
+
+		-webkit-appearance: none;
+
+		display: block;
+		width: 100%;
+		padding: 5px 10px;
+		@include font-size(18);
+		line-height: (25/18) + em;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: rgb(102, 102, 102);
+		background: $white;
+		border: 1px solid lighten($orange, 25%);
+		@include border-radius(0);
+
+	}
+
+	&[type="checkbox"] {
+
+		// position: relative;
+		// top: -3px;
+		// margin: 0 7px 0 0;
+
+	}
+
+	&[type="radio"] {
+
+		// position: relative;
+		// top: -4px;
+		// margin: 0 5px 0 0;
+
+	}
+
+	&[type="button"],
+	&[type="submit"] {
+
+		// Override general styles applied to iOS devices.
+
+		-webkit-appearance: none;
+
+		display: block;
+		padding: 11px 35px;
+		@include font-size(18);
+		line-height: (25/18) + em;
+		@include blokletters-viltstift;
+		text-align: center;
+		color: $white;
+		background: $orange;
+		border: 1px solid $orange;
+		@include border-radius(3px);
+		@include vertical(lighten($orange, 20%), $orange);
+		@include box-shadow(0 2px 0 rgba($white, 0.35) inset);
+
+		&:hover {
+
+			border-color: $red;
+			@include vertical(lighten($red, 20%), $red);
+
+		}
+
+	}
+
+}
+
+textarea {
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	padding: 5px 10px;
+	@include font-size(18);
+	line-height: (25/18) + em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: rgb(102, 102, 102);
+	background: $white;
+	border: 1px solid lighten($orange, 25%);
+	@include border-radius(0);
+
+}
+
+button {
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+	display: block;
+	padding: 11px 35px;
+	@include font-size(18);
+	line-height: (25/18) + em;
+	@include blokletters-viltstift;
+	text-align: center;
+	color: $white;
+	background: $orange;
+	border: 1px solid $orange;
+	@include border-radius(3px);
+	@include vertical(lighten($orange, 20%), $orange);
+	@include box-shadow(0 2px 0 rgba($white, 0.35) inset);
+
+	&:hover {
+
+		border-color: $red;
+		@include vertical(lighten($red, 20%), $red);
+
+	}
+
+}

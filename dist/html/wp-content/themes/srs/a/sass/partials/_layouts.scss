@@ -1,0 +1,111 @@
+
+/*-------------------------------------------
+	Layouts
+-------------------------------------------*/
+
+
+html {}
+
+body {
+
+	background: url(../img/glow.png) center -20px no-repeat;
+	overflow-x: hidden;
+
+	@media screen and (min-width: 1060px) {
+
+		background-position: center 40px;
+
+	}
+
+}
+
+	#header {}
+
+	#content {
+
+		padding: 0 0 40px 0;
+		// overflow: hidden;
+
+		.wrap {
+
+			@media screen and (min-width: 860px) {
+
+				position: relative;
+				min-height: 400px;
+
+			}
+
+			#home & {
+
+				@media screen and (min-width: 860px) {
+
+					position: static;
+					min-height: none;
+
+				}
+
+			}
+
+			&:before {
+
+				@media screen and (min-width: 860px) {
+
+					content: "";
+					position: absolute;
+					left: -100px;
+					top: 13px;
+					width: 460px;
+					height: 400px;
+					background: url(../img/spotlight-left.png);
+					z-index: -1;
+
+				}
+
+				#home & {
+
+					@media screen and (min-width: 860px) {
+
+						content: none;
+
+					}
+
+				}
+
+			}
+
+			&:after {
+
+				@media screen and (min-width: 860px) {
+
+					content: "";
+					position: absolute;
+					right: -100px;
+					top: 13px;
+					width: 460px;
+					height: 400px;
+					background: url(../img/spotlight-right.png);
+					z-index: -1;
+
+				}
+
+				#home & {
+
+					@media screen and (min-width: 860px) {
+
+						content: none;
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+		#main {}
+
+		#secondary {}
+
+	#footer {}
